@@ -1,0 +1,61 @@
+version: "3.9"
+services:
+
+    webgoat:
+        container_name: "webgoat"
+        image: santosomar/webgoat
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.6.6.11
+                
+    juice-shop:
+        container_name: "juice-shop"
+        image: santosomar/juice-shop
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.6.6.12
+                
+    dvwa:
+        container_name: "dvwa"
+        image: santosomar/dvwa
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.6.6.13
+
+
+    mutillidae_2:
+        container_name: "mutillidae_2"
+        image: santosomar/mutillidae_2
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.6.6.14
+
+    dvna:
+        container_name: "dvna"
+        image: santosomar/dvna
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.6.6.15
+
+    hackazon:
+        container_name: "hackazon"
+        image: santosomar/hackazon
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.6.6.16
+
+
+
+networks:
+    websploit:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 10.6.6.0/24
+                  gateway: 10.6.6.1
