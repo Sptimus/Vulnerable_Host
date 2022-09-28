@@ -12,7 +12,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "88136f63-c850-47d9-984b-2cc21f622940"
-                splunk-url: "192.168.174.137:8088"
+                splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true"
                 
     juice-shop:
@@ -26,7 +26,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "88136f63-c850-47d9-984b-2cc21f622940"
-                splunk-url: "192.168.174.137:8088"
+                splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true"        
                 
     dvwa:
@@ -40,7 +40,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "88136f63-c850-47d9-984b-2cc21f622940"
-                splunk-url: "192.168.174.137:8088"
+                splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
 
     mutillidae_2:
@@ -54,7 +54,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "88136f63-c850-47d9-984b-2cc21f622940"
-                splunk-url: "192.168.174.137:8088"
+                splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
 
     dvna:
@@ -68,7 +68,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "88136f63-c850-47d9-984b-2cc21f622940"
-                splunk-url: "192.168.174.137:8088"
+                splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
 
     hackazon:
@@ -82,7 +82,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "88136f63-c850-47d9-984b-2cc21f622940"
-                splunk-url: "192.168.174.137:8088"
+                splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
 
 
