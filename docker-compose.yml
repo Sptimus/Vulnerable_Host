@@ -8,6 +8,12 @@ services:
         networks:
             websploit:
                 ipv4_address: 10.6.6.11
+        logging:
+            driver: splunk
+            options:
+                splunk-token: "XXXXXXXXXXXXX"
+                splunk-url: "192.168.174.137:8080"
+                splunk-insecureskipverify: "true"
                 
     juice-shop:
         container_name: "juice-shop"
@@ -16,6 +22,12 @@ services:
         networks:
             websploit:
                 ipv4_address: 10.6.6.12
+        logging:
+            driver: splunk
+            options:
+                splunk-token: "XXXXXXXXXXXXX"
+                splunk-url: "192.168.174.137:8080"
+                splunk-insecureskipverify: "true"        
                 
     dvwa:
         container_name: "dvwa"
@@ -24,7 +36,12 @@ services:
         networks:
             websploit:
                 ipv4_address: 10.6.6.13
-
+        logging:
+            driver: splunk
+            options:
+                splunk-token: "XXXXXXXXXXXXX"
+                splunk-url: "192.168.174.137:8080"
+                splunk-insecureskipverify: "true" 
 
     mutillidae_2:
         container_name: "mutillidae_2"
@@ -33,6 +50,12 @@ services:
         networks:
             websploit:
                 ipv4_address: 10.6.6.14
+        logging:
+            driver: splunk
+            options:
+                splunk-token: "XXXXXXXXXXXXX"
+                splunk-url: "192.168.174.137:8080"
+                splunk-insecureskipverify: "true" 
 
     dvna:
         container_name: "dvna"
@@ -41,6 +64,12 @@ services:
         networks:
             websploit:
                 ipv4_address: 10.6.6.15
+        logging:
+            driver: splunk
+            options:
+                splunk-token: "XXXXXXXXXXXXX"
+                splunk-url: "192.168.174.137:8080"
+                splunk-insecureskipverify: "true" 
 
     hackazon:
         container_name: "hackazon"
@@ -49,7 +78,12 @@ services:
         networks:
             websploit:
                 ipv4_address: 10.6.6.16
-
+        logging:
+            driver: splunk
+            options:
+                splunk-token: "XXXXXXXXXXXXX"
+                splunk-url: "192.168.174.137:8080"
+                splunk-insecureskipverify: "true" 
 
 
 networks:
