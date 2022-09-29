@@ -47,6 +47,8 @@ chmod 744 nodegoat.sh
 
 #cloning H4cker github
 cd /root
+mkdir Tools
+cd /root/Tools
 git clone https://github.com/The-Art-of-Hacking/h4cker.git
 
 #cloning SecLists
@@ -59,8 +61,8 @@ git clone https://github.com/internetwache/GitTools.git
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
 
 #getting test ssl script
-#curl -L https://testssl.sh --output testssl.sh
-#chmod +x testssl.sh
+curl -L https://testssl.sh --output testssl.sh
+chmod +x testssl.sh
 
 #Installing ffuf 
 apt install -y ffuf
@@ -81,20 +83,19 @@ apt install -y nmap
 apt install -y net-tools
 
 #Installing metasploit
-cd /root
+cd /root/Tools
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod 755 msfinstall
 ./msfinstall
 
 
 #Installing radamnsa
-cd /root
+cd /root/Tools
 git clone https://gitlab.com/akihe/radamsa.git && cd radamsa && make && sudo make install
 
 #Installing Ghidra
-cd /root
-mkdir Tools
-cd /Tools
+cd /root/Tools
+
 
 # first install Java Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the 
 # Open Java Development Kit (OpenJDK). Corretto comes with long-term support that includes performance 
