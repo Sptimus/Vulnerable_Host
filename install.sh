@@ -17,6 +17,11 @@ apt update
 apt install -y wget vim vim-python-jedi curl exuberant-ctags git ack-grep python3-pip git
 pip3 install pep8 flake8 pyflakes isort yapf Flask
 
+#Installing apache
+apt install -y apache2
+ufw allow 'Apache'
+
+
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
 apt update
@@ -32,6 +37,7 @@ wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compo
 
 # instantiating the containers with docker-compose
 echo "Setting up the containers and internal bridge network"
+cp env.example .env
 docker-compose -f docker-compose.yml up -d
 
 # cloning NodeGoat
@@ -115,10 +121,6 @@ apt install -y edb-debugger
 #Installing gobuster
 apt install -y gobuster
 
-#Installing apache
-apt install -y apache2
-ufw allow 'Apache'
-
 #Installing Sublist3r
 cd /root/Tools
 git clone https://github.com/aboul3la/Sublist3r.git
@@ -134,6 +136,13 @@ cd /root/Tools
 git clone https://github.com/guelfoweb/knock.git
 cd knock
 python3 setup.py install
+
+#Setting up the navigation HUB
+cd /root
+git clone https://github.com/Sptimus/Vulnerable_Host.git
+rm /var/www/html/index.html
+cp -R /root/Vulnerable_Host/hub /var/www/html
+
 
 #Getting the container info script
 sudo cd /root
