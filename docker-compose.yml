@@ -51,7 +51,6 @@ services:
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
                 tag: "dvwa"
-        command: bash -c "ln -sf /dev/stdout /var/log/apache2/other_vhosts_access.log"
 
     mutillidae_2:
         container_name: "mutillidae_2"
