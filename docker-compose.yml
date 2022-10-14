@@ -2,12 +2,6 @@ version: "3.9"
 services:
 
     webgoat:
-      #        entrypoint: /bin/bash -c "ln -sf /dev/stderr /tmp/wolferror.log 
-      #          && ln -sf /dev/stdout /tmp/wolfaccess.log 
-      #          && ln -sf /dev/stdout /tmp/goataccess.log 
-      #          && ln -sf /dev/stderr /tmp/goaterror.log 
-      #          && /bin/sh /home/webgoat/start.sh 8.2.2
-      #          "
         container_name: "webgoat"
         image: santosomar/webgoat
         volumes:
@@ -25,7 +19,6 @@ services:
                 tag: "webgoat"
                 
     juice-shop:
-      #entrypoint: /bin/sh -c "ln -sf /dev/stdout /juice-shop/logs/access.log.2022-10-14 && npm start" #TODO: auto adjust date
         container_name: "juice-shop"
         image: santosomar/juice-shop
         volumes: 
@@ -76,10 +69,6 @@ services:
                 splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true" 
                 tag: "mutillidae_2"
-                  #        command: bash -c "ln -sf /dev/stdout /var/log/apache2/access.log && 
-                  #          ln -sf /dev/stderr /var/log/apache2/error.log &&
-                  #          /run.sh
-                  #          "
 
     dvna:
         container_name: "dvna"
