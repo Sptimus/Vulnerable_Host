@@ -4,6 +4,8 @@ services:
     webgoat:
         container_name: "webgoat"
         image: santosomar/webgoat
+        volumes:
+          - logs-webgoat:/tmp/
         restart: unless-stopped
         networks:
             vulnnet:
@@ -14,10 +16,13 @@ services:
                 splunk-token: "${SPLUNK_TOKEN}"
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true"
+                tag: "webgoat"
                 
     juice-shop:
         container_name: "juice-shop"
         image: santosomar/juice-shop
+        volumes: 
+          - logs-juice-shop:/juice-shop/logs/
         restart: unless-stopped
         networks:
             vulnnet:
@@ -28,10 +33,13 @@ services:
                 splunk-token: "${SPLUNK_TOKEN}"
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true"        
-                
+                tag: "juice-shop"
+
     dvwa:
         container_name: "dvwa"
         image: santosomar/dvwa
+        volumes: 
+          - logs-dvwa:/var/log/apache2/
         restart: unless-stopped
         networks:
             vulnnet:
@@ -42,10 +50,13 @@ services:
                 splunk-token: "${SPLUNK_TOKEN}"
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
+                tag: "dvwa"
 
     mutillidae_2:
         container_name: "mutillidae_2"
         image: santosomar/mutillidae_2
+        volumes:
+          - logs-mutillidae_2:/var/log/apache2
         restart: unless-stopped
         networks:
             vulnnet:
@@ -56,6 +67,7 @@ services:
                 splunk-token: "${SPLUNK_TOKEN}"
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
+                tag: "mutillidae_2"
 
     dvna:
         container_name: "dvna"
@@ -70,10 +82,13 @@ services:
                 splunk-token: "${SPLUNK_TOKEN}"
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
+                tag: "dvna"
 
     hackazon:
         container_name: "hackazon"
         image: santosomar/hackazon
+        volumes: 
+          - logs-hackazon:/var/log/apache2
         restart: unless-stopped
         networks:
             vulnnet:
@@ -84,6 +99,7 @@ services:
                 splunk-token: "${SPLUNK_TOKEN}"
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true" 
+                tag: "hackazon"
                 
     wp:
         container_name: "wordpress"
@@ -179,11 +195,6 @@ services:
                 splunk-url: "https://192.168.174.137:8088"
                 splunk-insecureskipverify: "true"
 
-volumes:
-  db_data:
-
-
-
 networks:
     vulnnet:
         driver: bridge
@@ -191,3 +202,15 @@ networks:
             config:
                 - subnet: 10.6.6.0/24
                   gateway: 10.6.6.1
+volumes:
+    db_data:
+    logs-hackazon:
+      external: true
+    logs-dvwa:
+      external: true
+    logs-webgoat:
+      external: true
+    logs-juice-shop:
+      external: true
+    logs-mutillidae_2:
+      external: true
