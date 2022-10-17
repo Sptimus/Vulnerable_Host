@@ -1,0 +1,50 @@
+<form version="1.1" theme="dark">
+	<label>IP activity</label>
+	<fieldset submitButton="false">
+		<input type="text" token="ip" searchWhenChanged="true">
+			<label>ip</label>
+			<default></default>
+		</input>
+	</fieldset>
+	<row>
+		<panel>
+			<title>Paths and useragents</title>
+			<table>
+				<search>
+					<query>client_ip=$ip$ | stats count by client_ip, path, user_agent, responsecode</query>
+					<earliest>-24h@h</earliest>
+					<latest>now</latest>
+				</search>
+				<option name="drilldown">none</option>
+				<option name="refresh.display">progressbar</option>
+			</table>
+		</panel>
+	</row>
+	<row>
+		<panel>
+			<title>Response codes</title>
+			<table>
+				<search>
+					<query>client_ip=$ip$ | stats count by responsecode</query>
+					<earliest>-24h@h</earliest>
+					<latest>now</latest>
+				</search>
+				<option name="drilldown">none</option>
+				<option name="refresh.display">progressbar</option>
+			</table>
+		</panel>
+	</row>
+	<row>
+		<panel>
+			<chart>
+				<search>
+					<query>client_ip=$ip$ | timechart count by host</query>
+					<earliest>-24h@h</earliest>
+					<latest>now</latest>
+				</search>
+				<option name="charting.chart">line</option>
+				<option name="charting.drilldown">none</option>
+			</chart>
+		</panel>
+	</row>
+</form>
