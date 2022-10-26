@@ -34,6 +34,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 echo "getting docker-compose.yml from Github Repository"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compose.yml
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/env.example
 
 # instantiating the containers with docker-compose
 echo "Setting up the containers and internal bridge network"
