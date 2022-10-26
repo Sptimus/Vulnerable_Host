@@ -118,7 +118,7 @@ python3 setup.py install
 cd /root
 git clone https://github.com/Sptimus/Vulnerable_Host.git
 rm /var/www/html/index.html
-cp -R /root/Vulnerable_Host/hub /var/www/html
+cp /root/Vulnerable_Host/hub/* /var/www/html
 
 
 #Getting the container info script
