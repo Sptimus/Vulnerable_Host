@@ -25,4 +25,4 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker run -d --mount source=logs-webgoat,target=/mnt/webgoat --mount source=logs-juice-shop,target=/mnt/juice-shop --mount source=logs-mutillidae_2,target=/mnt/mutillidae_2 --mount source=logs-dvwa,target=/mnt/dvwa --mount source=logs-hackazon,target=/mnt/hackazon -p 8000:8000 -p 8080:8080 -e "SPLUNK_START_ARGS=--accept-license" -e "SPLUNK_PASSWORD=Adam1000" --name splunk splunk/splunk:latest
 
-echo "Please now ADD your Splunk token to .env file in /root directory. Then run sudo ./install.sh"
+echo "Please now ADD your Splunk token to .env file in /root directory use instructions .pdf file to configure splunk. Then run sudo ./install.sh"
