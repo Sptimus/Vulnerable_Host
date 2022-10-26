@@ -10,6 +10,11 @@ pip3 install pep8 flake8 pyflakes isort yapf Flask
 #Installing apache
 apt install -y apache2
 ufw allow 'Apache'
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/ports.conf
+rm /etc/apache2/ports.conf
+mv ports.conf /etc/apache2/
+systemctl stop apache2
+systemctl start apache2
 
 echo "Installing Splunk and necessary dependencies!"
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
