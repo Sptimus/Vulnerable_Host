@@ -15,7 +15,6 @@ wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compo
 
 # instantiating the containers with docker-compose
 echo "Setting up the containers and internal bridge network"
-cp env.example .env
 docker-compose -f docker-compose.yml up -d
 
 # cloning NodeGoat
