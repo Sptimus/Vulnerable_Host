@@ -14,7 +14,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true"
                 tag: "webgoat"
                 
@@ -31,7 +31,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true"        
                 tag: "juice-shop"
 
@@ -48,7 +48,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true" 
                 tag: "dvwa"
 
@@ -65,7 +65,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true" 
                 tag: "mutillidae_2"
 
@@ -80,7 +80,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true" 
                 tag: "dvna"
 
@@ -97,7 +97,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true" 
                 tag: "hackazon"
                 
@@ -125,7 +125,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true"
 
     wpcli:
@@ -147,7 +147,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true"
 
     pma:
@@ -168,7 +168,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true"
 
     db:
@@ -192,7 +192,7 @@ services:
             driver: splunk
             options:
                 splunk-token: "${SPLUNK_TOKEN}"
-                splunk-url: "https://192.168.174.137:8088"
+                splunk-url: "${SPLUNK_URL}"
                 splunk-insecureskipverify: "true"
 
 networks:
