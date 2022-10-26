@@ -9,32 +9,9 @@ applications running in Docker containers. Labs include
 over many exercises to learn and practice ethical hacking (penetration testing) skills.
 "
 
-echo " "
-# Setting Up default Tools
-
 cd ~/
-apt update
-apt install -y wget vim vim-python-jedi curl exuberant-ctags git ack-grep python3-pip git
-pip3 install pep8 flake8 pyflakes isort yapf Flask
-
-#Installing apache
-apt install -y apache2
-ufw allow 'Apache'
-
-
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
-apt update
-apt remove docker docker-engine docker.io
-apt install -y docker-ce
-
-echo "Installing Updating Docker-Compose!"
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
 echo "getting docker-compose.yml from Github Repository"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compose.yml
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/env.example
 
 # instantiating the containers with docker-compose
 echo "Setting up the containers and internal bridge network"
