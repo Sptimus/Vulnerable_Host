@@ -16,15 +16,6 @@ echo "Configuring wordpress"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/php.ini
 mv php.ini /etc/php/8.1/fpm/php.ini
 
-echo "Now you need to insert these commands:"
-echo "sudo su"
-echo "mysql -u root -p"
-echo "CREATE DATABASE wpdb;"
-echo "CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'your password';"
-echo "GRANT ALL ON wpdb.* TO 'wpuser'@'localhost';"
-echo "FLUSH PRIVILEGES;"
-echo "EXIT;"
-
 
 cd /var/www/html
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.tar.gz
@@ -40,5 +31,14 @@ echo "127.0.0.1 wordpress.example.com" >> /etc/hosts
 
 systemctl restart nginx
 systemctl restart php8.1-fpm
-"Now go to http://wordpress.example.com and initialize wordpress dont worry about credentials"
+echo "Now you need to insert these commands:"
+echo "sudo su"
+echo "mysql -u root -p"
+echo "CREATE DATABASE wpdb;"
+echo "CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'your password';"
+echo "GRANT ALL ON wpdb.* TO 'wpuser'@'localhost';"
+echo "FLUSH PRIVILEGES;"
+echo "EXIT;"
+
+echo "Now go to http://wordpress.example.com and initialize wordpress dont worry about credentials"
 echo "Then run sudo ./install2.sh"
