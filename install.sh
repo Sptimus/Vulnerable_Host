@@ -9,6 +9,33 @@ applications running in Docker containers. Labs include
 over many exercises to learn and practice ethical hacking (penetration testing) skills.
 "
 
+# Install wordpress
+apt install nginx mariadb-server php php-fpm php-curl php-mysql php-gd php-mbstring php-xml php-imagick php-zip php-xmlrpc
+cd ~/
+echo "Configuring wordpress"
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/php.ini
+mv php.ini /etc/php/8.1/fpm/php.ini
+
+# Initalize wordpress database
+echo "Initalize database"
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wpdb.sql
+mysql wpdb -u wpuser -puser < wpdb.sql
+
+cd /var/www/html
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.tar.gz
+tar -zxvf latest.tar.gz
+chown -R www-data:www-data /var/www/html/wordpress
+chmod -R 755 /var/www/html/wordpress
+
+cd ~/
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.conf
+mv wordpress.conf /etc/nginx/conf.d/wordpress.conf
+
+echo "127.0.0.1 wordpress.example.com" >> /etc/hosts
+
+systemctl restart nginx
+systemctl restart php8.1-fpm
+
 cd ~/
 echo "getting docker-compose.yml from Github Repository"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compose.yml
