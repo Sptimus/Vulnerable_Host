@@ -33,7 +33,7 @@ systemctl restart nginx
 systemctl restart php8.1-fpm
 echo "Now you need to insert these commands:"
 echo "sudo su"
-echo "mysql -u root -p"
+echo "mysql"
 echo "CREATE DATABASE wpdb;"
 echo "CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'your password';"
 echo "GRANT ALL ON wpdb.* TO 'wpuser'@'localhost';"
