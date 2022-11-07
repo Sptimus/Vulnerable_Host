@@ -17,5 +17,7 @@ wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/php.ini
 mv php.ini /etc/php/8.1/fpm/php.ini
 
 echo "Now you need to insert these commands:"
+echo "sudo su"
 echo "mysql -u root -p"
 echo "CREATE DATABASE wpdb;"
+echo "Now run sudo ./install2.sh"
