@@ -23,7 +23,7 @@ mysql wpdb -u wpuser -puser < wpdb.sql
 
 cd /var/www/html
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.tar.gz
-tar -zxvf latest.tar.gz
+tar -zxvf wordpress.tar.gz
 chown -R www-data:www-data /var/www/html/wordpress
 chmod -R 755 /var/www/html/wordpress
 
