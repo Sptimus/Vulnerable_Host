@@ -20,4 +20,25 @@ echo "Now you need to insert these commands:"
 echo "sudo su"
 echo "mysql -u root -p"
 echo "CREATE DATABASE wpdb;"
-echo "Now run sudo ./install2.sh"
+echo "CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'your password';"
+echo "GRANT ALL ON wpdb.* TO 'wpuser'@'localhost';"
+echo "FLUSH PRIVILEGES;"
+echo "EXIT;"
+
+
+cd /var/www/html
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.tar.gz
+tar -zxvf wordpress.tar.gz
+chown -R www-data:www-data /var/www/html/wordpress
+chmod -R 755 /var/www/html/wordpress
+
+cd ~/
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.conf
+mv wordpress.conf /etc/nginx/conf.d/wordpress.conf
+
+echo "127.0.0.1 wordpress.example.com" >> /etc/hosts
+
+systemctl restart nginx
+systemctl restart php8.1-fpm
+"Now go to http://wordpress.example.com and initialize wordpress dont worry about credentials"
+echo "Then run sudo ./install2.sh"
