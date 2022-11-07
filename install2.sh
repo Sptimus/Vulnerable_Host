@@ -11,12 +11,11 @@ over many exercises to learn and practice ethical hacking (penetration testing) 
 
 # Initalize wordpress database
 echo "Initalize database"
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wpdb.sql
+#wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wpdb.sql
 mysql wpdb -u wpuser -puser < wpdb.sql
 
-cd ~/
-echo "getting docker-compose.yml from Github Repository"
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compose.yml
+#echo "getting docker-compose.yml from Github Repository"
+#wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compose.yml
 
 # instantiating the containers with docker-compose
 echo "Setting up the containers and internal bridge network"
@@ -30,7 +29,7 @@ curl -sSL https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/nodegoa
 
 # downloading the nodegoat.sh from Github Repository
 # this will be used manually to setup the NodeGoat environment
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/nodegoat.sh
+#wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/nodegoat.sh
 chmod 744 nodegoat.sh 
 
 #cloning H4cker github
