@@ -14,21 +14,6 @@ echo "Initalize database"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wpdb.sql
 mysql wpdb -u wpuser -puser < wpdb.sql
 
-cd /var/www/html
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.tar.gz
-tar -zxvf wordpress.tar.gz
-chown -R www-data:www-data /var/www/html/wordpress
-chmod -R 755 /var/www/html/wordpress
-
-cd ~/
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/wordpress.conf
-mv wordpress.conf /etc/nginx/conf.d/wordpress.conf
-
-echo "127.0.0.1 wordpress.example.com" >> /etc/hosts
-
-systemctl restart nginx
-systemctl restart php8.1-fpm
-
 cd ~/
 echo "getting docker-compose.yml from Github Repository"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/docker-compose.yml
