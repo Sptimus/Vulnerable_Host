@@ -22,8 +22,6 @@ echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' |
 apt update
 apt remove docker docker-engine docker.io
 apt install -y docker-ce
-wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/env.example
-cp env.example .env
 
 echo "Installing Updating Docker-Compose!"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
