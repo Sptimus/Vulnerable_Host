@@ -10,7 +10,7 @@ over many exercises to learn and practice ethical hacking (penetration testing) 
 "
 
 # Install wordpress
-apt install nginx mariadb-server php php-fpm php-curl php-mysql php-gd php-mbstring php-xml php-imagick php-zip php-xmlrpc
+apt install -y nginx mariadb-server php php-fpm php-curl php-mysql php-gd php-mbstring php-xml php-imagick php-zip php-xmlrpc
 cd ~/
 echo "Configuring wordpress"
 wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/php.ini
