@@ -124,6 +124,13 @@ git clone https://github.com/Sptimus/Vulnerable_Host.git
 rm /var/www/html/index.html
 cp /root/Vulnerable_Host/hub/* /var/www/html
 
+#Local Privilege Escalation
+chmod 777 /etc/shadow
+chmod 777 /etc/passwd
+chmod u+s /bin/find
+chmod u+s /bin/vim
+chown root /bin/find
+chown root /bin/vim
 
 #Getting the container info script
 sudo cd /root
