@@ -118,6 +118,10 @@ git clone https://github.com/guelfoweb/knock.git
 cd knock
 python3 setup.py install
 
+#Download linpeas
+cd /home/user
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
+
 #Setting up the navigation HUB
 cd /root
 git clone https://github.com/Sptimus/Vulnerable_Host.git
@@ -129,8 +133,13 @@ chmod 777 /etc/shadow
 chmod 777 /etc/passwd
 chmod u+s /bin/find
 chmod u+s /bin/vim
-chown root /bin/find
 chown root /bin/vim
+cd /home/user
+wget https://raw.githubusercontent.com/Sptimus/Vulnerable_Host/main/crontab.bak
+crontab crontab.bak
+touch script.sh
+echo "#!/bin/bash" >> script.sh
+chmod 777 script.sh
 
 #Getting the container info script
 sudo cd /root
