@@ -69,6 +69,12 @@ apt install -y nmap
 #Installing net-tools
 apt install -y net-tools
 
+#Installing john
+apt install -y john
+
+#Installing hashcat
+apt install -y hashcat
+
 #Installing metasploit
 cd /root/Tools
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
