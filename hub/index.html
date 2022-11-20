@@ -41,10 +41,10 @@
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i>MACHINES</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-      <a href="http://127.0.0.1/writeups.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> WRITEUPS</a>
-      <a href="http://127.0.0.1/resources.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> RESOURCES</a>
+      <a href="http://127.0.0.1:81/writeups.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> WRITEUPS</a>
+      <a href="http://127.0.0.1:81/resources.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> RESOURCES</a>
+      <a href="http://127.0.0.1:8000/" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i> SPLUNK</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -59,21 +59,13 @@
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">MACHINES</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time and start learing cybersecurity!</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div> 
+
 </header>
 
-<!-- Machines -->
+<!-- Machines  a href="http://10.6.6.11:9090/" -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">Vulnerable machines</h3>
   <p class="w3-center w3-large">Our vulnerable machines!</p>
@@ -81,12 +73,12 @@
     <div class="w3-quarter">
       <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large"><a href="http://10.6.6.11:8080/WebGoat/login">WebGoat</a></p>
-      <p>WebGoat is a deliberately insecure application that allows interested developers just like you to test vulnerabilities commonly found in Java-based applications that use common and popular open source components.</p>
+      <p>WebGoat is a deliberately insecure application that allows interested developers just like you to test vulnerabilities commonly found in Java-based applications that use common and popular open source components. WebWolf is a separate web application which simulates an attackers machine. It makes it possible for us to make a clear distinction between what takes place on the attacked website and the actions you need to do as an “attacker”.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://10.6.6.11:9090/">WebWolf</a></p>
-      <p>WebWolf is a separate web application which simulates an attackers machine. It makes it possible for us to make a clear distinction between what takes place on the attacked website and the actions you need to do as an “attacker”.</p>
+      <p class="w3-large"><a href="http://wordpress.example.com">WordPress</a></p>
+      <p>Missconfigured wordpress with vulnerable plugins and passwords from dictionary</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
@@ -122,8 +114,8 @@
     </div>
     <div class="w3-quarter">
       <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://127.0.0.1/ubuntu.html">Ubuntu machine</a></p>
-      <p>Our special machine with Ubuntu 14.04 which is supposed to teach different possible elevations of privileges in linux system by kernel vulnerabilities.</p>
+      <p class="w3-large"><a href="http://127.0.0.1:81/ubuntud.pdf">Ubuntu machine</a></p>
+      <p>Local privilege escalation on Ubuntu Machine</p>
     </div>
   </div>
 </div>
@@ -149,7 +141,7 @@
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://cybersecurity.w3spaces.com/mati.jpeg" alt="Mateusz" style="width:100%">
+        <img src="http://127.0.0.1:81/anon.jpg" alt="Mateusz" style="width:100%">
         <div class="w3-container">
           <h3>Mateusz Rus</h3>
           <p class="w3-opacity">AGH Student & Penetration Tester</p>
@@ -160,7 +152,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jakub" style="width:100%">
+        <img src="http://127.0.0.1:81/anon.jpg" alt="Jakub" style="width:100%">
         <div class="w3-container">
           <h3>Jakub Niezabitowski</h3>
           <p class="w3-opacity">AGH Student & SOC L2</p>
@@ -171,7 +163,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Szymon" style="width:100%">
+        <img src="http://127.0.0.1:81/anon.jpg" alt="Szymon" style="width:100%">
         <div class="w3-container">
           <h3>Szymon Chmiel</h3>
           <p class="w3-opacity">AGH Student & Penetration Tester</p>
@@ -182,7 +174,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Daniel" style="width:100%">
+        <img src="http://127.0.0.1:81/anon.jpg" alt="Daniel" style="width:100%">
         <div class="w3-container">
           <h3>Daniel Adamiec</h3>
           <p class="w3-opacity">AGH Student & Penetration Tester</p>
@@ -211,42 +203,6 @@
   <div class="w3-quarter">
     <span class="w3-xxlarge">500+</span>
     <br> Hours spent on project 
-  </div>
-</div>
-
-<!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">Tu będzie trzeba dać zdjęcia z naszej inżynierki i będzie git</p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
   </div>
 </div>
 
