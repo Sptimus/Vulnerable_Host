@@ -20,6 +20,13 @@
 				"primary": "ds_6qkCnIPR"
 			},
 			"title": "Requests overview"
+		},
+		"viz_cynMglMZ": {
+			"type": "splunk.table",
+			"dataSources": {
+				"primary": "ds_XnB871Pd"
+			},
+			"title": "Flagging"
 		}
 	},
 	"dataSources": {
@@ -40,9 +47,16 @@
 		"ds_6qkCnIPR": {
 			"type": "ds.search",
 			"options": {
-				"query": "client_ip=$ip$ | stats count by client_ip, path, user_agent, responsecode"
+				"query": "client_ip=$ip$ | stats count by client_ip, path, user_agent, responsecode, host"
 			},
 			"name": "Requests overview"
+		},
+		"ds_XnB871Pd": {
+			"type": "ds.search",
+			"options": {
+				"query": "| inputlookup flagging | search indicator=$ip$ | eval time=strftime(time,\"%d/%m/%y %H:%M:%S\") "
+			},
+			"name": "flagging"
 		}
 	},
 	"defaults": {
@@ -90,6 +104,16 @@
 				}
 			},
 			{
+				"item": "viz_qlOnHohH",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 400,
+					"w": 1200,
+					"h": 400
+				}
+			},
+			{
 				"item": "viz_rqg7ZM4W",
 				"type": "block",
 				"position": {
@@ -100,11 +124,11 @@
 				}
 			},
 			{
-				"item": "viz_qlOnHohH",
+				"item": "viz_cynMglMZ",
 				"type": "block",
 				"position": {
 					"x": 0,
-					"y": 400,
+					"y": 800,
 					"w": 1200,
 					"h": 400
 				}
