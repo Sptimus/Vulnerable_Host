@@ -1,6 +1,6 @@
 source="*access.log*" ("+AND+" OR "+UNION+" OR "+select+" OR "+OR+")
 | eval activity="sqli", indicator_type="ipv4"
-| rename client_ip as indicator
+| rename clientip as indicator
 | streamstats max(_time) as time
 | stats count by indicator, activity, indicator_type, time
 | rename count as volume
