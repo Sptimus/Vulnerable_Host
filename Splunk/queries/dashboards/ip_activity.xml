@@ -11,7 +11,7 @@
 			<title>Paths and useragents</title>
 			<table>
 				<search>
-					<query>client_ip=$ip$ | stats count by client_ip, path, user_agent, responsecode</query>
+					<query>clientip=$ip$ | stats count by clientip, uri, useragent, status</query>
 					<earliest>-24h@h</earliest>
 					<latest>now</latest>
 				</search>
@@ -25,7 +25,7 @@
 			<title>Response codes</title>
 			<table>
 				<search>
-					<query>client_ip=$ip$ | stats count by responsecode</query>
+					<query>clientip=$ip$ | stats count by status</query>
 					<earliest>-24h@h</earliest>
 					<latest>now</latest>
 				</search>
@@ -38,7 +38,7 @@
 		<panel>
 			<chart>
 				<search>
-					<query>client_ip=$ip$ | timechart count by host</query>
+					<query>clientip=$ip$ | timechart count by host</query>
 					<earliest>-24h@h</earliest>
 					<latest>now</latest>
 				</search>

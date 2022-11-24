@@ -1,4 +1,4 @@
-source="*access.log*" ("+AND+" OR "+UNION+" OR "+select+" OR "+OR+")
+("+AND+" OR "+UNION+" OR "+select+" OR "+OR+") host=nginx
 | eval activity="sqli", indicator_type="ipv4"
 | rename clientip as indicator
 | streamstats max(_time) as time
