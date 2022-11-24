@@ -33,21 +33,21 @@
 		"ds_R6aPtdjg": {
 			"type": "ds.search",
 			"options": {
-				"query": "client_ip=$ip$ | stats count by responsecode, host"
+				"query": "clientip=$ip$ | stats count by status, host"
 			},
-			"name": "responsecodes"
+			"name": "statuss"
 		},
 		"ds_kojyO2cB": {
 			"type": "ds.search",
 			"options": {
-				"query": "client_ip=$ip$ | timechart count by host"
+				"query": "clientip=$ip$ | timechart count by host"
 			},
 			"name": "Requests by host"
 		},
 		"ds_6qkCnIPR": {
 			"type": "ds.search",
 			"options": {
-				"query": "client_ip=$ip$ | stats count by client_ip, path, user_agent, responsecode, host"
+				"query": "clientip=$ip$ | stats count by clientip, uri, useragent, status, host"
 			},
 			"name": "Requests overview"
 		},
