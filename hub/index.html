@@ -1,299 +1,296 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vulnerable environment</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" nonce="fdfe7e480d20464f89249445f06" src="//local.adguard.org?ts=1664895632066&amp;type=content-script&amp;dmn=productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com&amp;pth=%2Fcybersecurity%2Findex.html%3FAWSAccessKeyId%3DASIAZDCUMOBDSHY2OEVT%26Signature%3DEcrkOj80BwMOY%252BQr4QIJ5V%252BumwQ%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEAkaCXVzLWVhc3QtMSJGMEQCID%252FW3rG4UvdkrqcgxjbIxTxnA8qvzHy%252B1%252BcF2kJSgctsAiB8RUgHWVwLcdgfsioocjR%252Bz8WSi0oW%252B%252FFQ6PfVfopllCqLAwjB%252F%252F%252F%252F%252F%252F%252F%252F%252F%252F8BEAEaDDYyNTA5NDcxNzUxMSIMxhLp95a6C2nKO0TwKt8CtrWk3Hgj3ndQY5cBa8akBY9OZ%252FdcZ20PIJbJyvvnmHCJsAPLFnFUK%252BVyHovCoCEeL0yq3e2nEp%252BVku2lHUphkGa12pfiHDq5jObLm%252BULMk0vWP%252F1M%252F%252BltKjWLii2VAWp7k8s1rCoroe31enJNYOcwvmRIGyH6eQBTBWPz5v9yMBqv%252FH5%252BTTB%252BxoLFfdWVGHs0S0mu1w7A0ldOJfBjVL2CY9t1pgjhCHM70oRCxyGlyOdHW8Yujj27CFNqQbYjKSIvyIxMMwTFGAI5YqNmWVr7fSysByk2pkAT%252FHEVkmf48yVUnWHpSXZ76lQsImkQzEahylzUP0hC6FQvHdYeSx8ziqHFvTE4z9%252FX0PHaBZMVub7xFFlxvq2sr82dYblV2PQ35FxYvlQpH7v5KhJQq9Al6CdBn%252BkTSX2tjaIO%252B4qibwiokfs8BaA5DeCXDq8AmL2Q%252FCy2lYDbaxYH09mB7CgMJm68ZkGOp8Bdj6b9wU%252FeL0PjC6aOtLl%252BD1AB1o%252F5a1BTlO4Cz6TUWpBqsMKAyR8%252F5sSMDMnAA9NzQMty0QuLzXXsjBpQrCEjRmhrfuOTA3BVBaxS54M%252B%252BREVqt6Up9skvIw4i8Usv8LbcmCj6nJD%252BToCDznrVeQVA5Oou9lyRWYUeU491AgfQi7UwxkRZMKnboDvquAt%252FXityNeE3UZsX6V4pHSjtp6%26Expires%3D1664907310&amp;app=brave.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
-<script type="text/javascript" nonce="fdfe7e480d20464f89249445f06" src="//local.adguard.org?ts=1664895632066&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><script type="text/javascript" nonce="fdfe7e480d20464f89249445f06" src="//local.adguard.org?ts=1664470462209&amp;type=content-script&amp;dmn=productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com&amp;pth=%2Fcybersecurity%2Findex.html%3FAWSAccessKeyId%3DASIAZDCUMOBD7DKFHZ5O%26Signature%3DuC3%252FcoUAOPzuuUjNur3Wbbziss0%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEJL%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJIMEYCIQDKJLWjMW7cK176fWXJYfsghvuCh32Bc%252FjW5bfWJeRjPgIhAMYb%252BiCo1GmaxyoRUxufboyTagaYXIJ%252Bi8B5gULpFMDsKoIDCEoQARoMNjI1MDk0NzE3NTExIgyouSPyjuySsk6tbAcq3wJ0bDi9TZoWAu7JtbnnfA3sPSZXD0%252FT3JWdkT%252BNEyiKwqcciqsz%252Btyekcb3D16NnoRK0kIKzwbideN4%252BJRHbjy%252Fh5%252FD0es%252FKcTcnI8rFGC2GqAFTRGpxAg2%252FNbaXO3sMfjqhJX%252FAuVaI1xVOCIct3YL7YJyxxG38t61tcS4yqZLDp7sPtQ09SVCVQZd3m5BIam5IQX5McoWwj4%252FB6d8vwtTVyXdJGRQ7pRZPqjCY0%252BxVaKYTzm66pTbzO0E4lUnGZbrFmgNropnTQTv%252F%252FGA87NvEthuGXh2%252FOqb1Lxo8WRlZcX60hOIex661Z4q%252BXJQ0pNn%252BhJMzHL019MyZVLDvX2%252BBAKyTYfMxuzwrogLSy8utSBeLgfaR0C63Rckx%252F%252BSZFiwI2RO6PDtoGs%252FTfZ5D0SwrEx0ACgnU53knZ5jinprtBDE9YFszAQhf%252Bfrkpkqrtd%252FBPNuc5q8xdlD23GHfMcwt6fXmQY6nQF8B194evG7QocJ%252BzHPFhrecrFKY4608yuCGvt4xgZCmZTLyJ5HV%252BjYnl1y8S%252FRmR4h%252BMHCnlxoRHZt7ajZfj%252FRxqQjOAvmwqs%252Bw0b0scM6RFjzYnYyC1SkmNecp3XJDeHCoEs0gz%252FaMnU7t1tHDJYcMgnDmlqm4xa54KGi58PgVN7QOGpVfRlCGMYM4bXlon1C8rIGpaa0grgQjd3N%26Expires%3D1664478244&amp;app=brave.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
-<script type="text/javascript" nonce="fdfe7e480d20464f89249445f06" src="//local.adguard.org?ts=1664470462209&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><script type="text/javascript" nonce="fdfe7e480d20464f89249445f06" src="//local.adguard.org?ts=1664470462209&amp;type=content-script&amp;dmn=productionstage-hostingstack-serverbucket50ee8d24-18stefou6iti3.s3.amazonaws.com&amp;pth=%2Fcybersecurity%2Findex.html%3FAWSAccessKeyId%3DASIAZDCUMOBDTERLVXUC%26Signature%3DiRtxdZ86Z6AgP7N5DcNUu9UYJ3U%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEI%252F%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJGMEQCIEBSTpfYFpHjvKoEup2GdqyWGMNmuwgdsBUXWrdvLq6mAiBcCfCR1CjHqPe%252BS1ZxjB65vLWeLphGcvmUo2W%252FbMOTXSqCAwhIEAEaDDYyNTA5NDcxNzUxMSIMJhr1Su%252BtbJ%252BCPn76Kt8CYUImdtEpG1xsPBoM4uZXkTW9gpw3S7TqbFH3Afxp4ZdWOHqMHtJrk53rHebbWehuFtP6j3DS1gBQ86D1SNNpt17G0fCrK9v3L9RjYnP%252FyzuB1nOd21%252FA%252BFD7mKDQJCwTR86Enz81No4X%252F1WUFEzN9UG3Ql10P30wZnWtoAtGojhickAXUeOPt%252F4nzMMqJd4cKHQRxs9NgH9qQOaYaRjgR%252BtudWkKo%252FoCI4ErYzdk6ahbcbCwYHYsGgy5Sczv6eFelactMwbKouDZPZrAB4rxxptx7mleY830heKRhqiWGlu18t0qvadyuuAgkxqeC%252Bc8Q0D%252F9QR%252F%252BTVt%252FmZhk5ER0VhlrMNKWhrD9cYbWK6yjTWUnZpMd1KVmEh4Py8mj7Zt6RIktStMvviS2XrwmGuhSjQlepX%252F%252Bo5shHn2vx690xFezB%252FAb8VAw917MrbaerJQi8%252BEOBz6E%252FOwBnNTUEYlMJrl1pkGOp8BInDe68NZlFkYIJwDpNKfKnKfUjim998wGBc7%252BINRVvbS7LbjzeKcXwC5BAKW8ih6Pe9ym07wFJ%252BrGsLzqNAzhb0xL3KLmwQuVeY4vV8VkVBSDTyUCpGKDXu6ZD2DAxCw%252FT8jbmKgOOtKAogyLGGEnYsSGa59YhPKOv5cWdW%252BKIfgjwVPg2wgU26rmS1WhmGpLQkJoG4obf8RW0HgYVTB%26Expires%3D1664474652&amp;app=brave.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
-<script type="text/javascript" nonce="fdfe7e480d20464f89249445f06" src="//local.adguard.org?ts=1664470462209&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	<head>
+		<title>Vulnerable environment</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-    body, html {
-      height: 100%;
-      line-height: 1.8;
-    }
+body, html {
+	height: 100%;
+	line-height: 1.8;
+}
 
     /* Full height image header */
     .bgimg-1 {
-      background-position: center;
-      background-size: cover;
-      background-image: url("https://www.w3schools.com/w3images/mac.jpg");
-      min-height: 100%;
+	    background-position: center;
+	    background-size: cover;
+	    background-image: url("https://www.w3schools.com/w3images/mac.jpg");
+	    min-height: 100%;
     }
 
     .w3-bar .w3-button {
-      padding: 16px;
+	    padding: 16px;
     }
-    </style>
-  </head>
-<body>
+		</style>
+	</head>
+	<body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i>MACHINES</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-      <a href="http://127.0.0.1:81/writeups.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> WRITEUPS</a>
-      <a href="http://127.0.0.1:81/resources.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> RESOURCES</a>
-      <a href="http://127.0.0.1:8000/" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i> SPLUNK</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+		<!-- Navbar (sit on top) -->
+		<div class="w3-top">
+			<div class="w3-bar w3-white w3-card" id="myNavbar">
+				<a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+				<!-- Right-sided navbar links -->
+				<div class="w3-right w3-hide-small">
+					<a href="#about" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i>MACHINES</a>
+					<a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+					<a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+					<a href="http://hub.com.pl/writeups.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> WRITEUPS</a>
+					<a href="http://hub.com.pl/resources.html" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> RESOURCES</a>
+					<a href="http://127.0.0.1:8000/" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i> SPLUNK</a>
+				</div>
+				<!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+		</div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">MACHINES</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
-
-
-</header>
-
-<!-- Machines  a href="http://10.6.6.11:9090/" -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">Vulnerable machines</h3>
-  <p class="w3-center w3-large">Our vulnerable machines!</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large"><a href="http://10.6.6.11:8080/WebGoat/login">WebGoat</a></p>
-      <p>WebGoat is a deliberately insecure application that allows interested developers just like you to test vulnerabilities commonly found in Java-based applications that use common and popular open source components. WebWolf is a separate web application which simulates an attackers machine. It makes it possible for us to make a clear distinction between what takes place on the attacked website and the actions you need to do as an “attacker”.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://wordpress.example.com">WordPress</a></p>
-      <p>Missconfigured wordpress with vulnerable plugins and passwords from dictionary</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://10.6.6.12:3000/">Juice-Shop</p></a>
-      <p>Juice Shop is written in Node.js, Express and Angular. It was the first application written entirely in JavaScript listed in the OWASP VWA Directory. The application contains a vast number of hacking challenges of varying difficulty where the user is supposed to exploit the underlying vulnerabilities. The hacking progress is tracked on a score board. Finding this score board is actually one of the (easy) challenges!</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://10.6.6.13:80">DVWA</a></p>
-      <p>Damn Vulnerable Web Application (DVWA) is a PHP/MySQL web application that is damn vulnerable. Its main goal is to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and to aid both students & teachers to learn about web application security in a controlled class room environment.</p>
-    </div>
-  </div>
-</div>
-<!-- Machines -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">Vulnerable machines </h3>
-  <p class="w3-center w3-large">Even more machines!</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large"><a href="http://10.6.6.14:80">Mutillidae_2</a></p>
-      <p>OWASP Mutillidae II is a free, open-source, deliberately vulnerable web application providing a target for web-security enthusiasts. Mutillidae can be installed on Linux and Windows using LAMP, WAMP, and XAMMP. It is pre-installed on SamuraiWTF and OWASP BWA. The existing version can be updated on these platforms. With dozens of vulnerabilities and hints to help the user; this is an easy-to-use web hacking environment designed for labs, security enthusiast, classrooms, CTF, and vulnerability assessment tool targets. Mutillidae has been used in graduate security courses, corporate web sec training courses, and as an "assess the assessor" target for vulnerability assessment software.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://10.6.6.15:9090">DVNA</a></p>
-      <p>Damn Vulnerable NodeJS Application (DVNA) is a simple NodeJS application to demonstrate OWASP Top 10 Vulnerabilities and guide on fixing and avoiding these vulnerabilities. The fixes branch will contain fixes for the vulnerabilities. </p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://10.6.6.16:80">Hackazon</a></p>
-      <p>Hackazon is a free, vulnerable test site that is an online storefront built with the same technologies used in today’s rich client and mobile applications. Hackazon has an AJAX interface, strict workflows and RESTful API’s used by a companion mobile app providing uniquely-effective training and testing ground for IT security professionals. And, it’s full of your favorite vulnerabilities like SQL Injection, cross-site scripting and so on.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large"><a href="http://127.0.0.1:81/ubuntud.pdf">Ubuntu machine</a></p>
-      <p>Local privilege escalation on Ubuntu Machine</p>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>We know cybersecurity</h3>
-      <p>We have prepared many open source machines that will help you learn to hack. The machines are placed on the docker, but not only. We hope you will have a lot of fun!</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Machines</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
-  </div>
-</div>
-
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who created this project</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="http://127.0.0.1:81/anon.jpg" alt="Mateusz" style="width:100%">
-        <div class="w3-container">
-          <h3>Mateusz Rus</h3>
-          <p class="w3-opacity">AGH Student & Penetration Tester</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="http://127.0.0.1:81/anon.jpg" alt="Jakub" style="width:100%">
-        <div class="w3-container">
-          <h3>Jakub Niezabitowski</h3>
-          <p class="w3-opacity">AGH Student & SOC L2</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="http://127.0.0.1:81/anon.jpg" alt="Szymon" style="width:100%">
-        <div class="w3-container">
-          <h3>Szymon Chmiel</h3>
-          <p class="w3-opacity">AGH Student & Penetration Tester</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="http://127.0.0.1:81/anon.jpg" alt="Daniel" style="width:100%">
-        <div class="w3-container">
-          <h3>Daniel Adamiec</h3>
-          <p class="w3-opacity">AGH Student & Penetration Tester</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">100+</span>
-    <br>Vulnerabilities
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">8</span>
-    <br>Virtual Machines
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">120+</span>
-    <br>Visits on site 
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">500+</span>
-    <br> Hours spent on project 
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>The skills we acquired while creating this project</p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Ethical Hacking</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>General Security</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-cog w3-margin-right"></i>Programming</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Kraków, PL</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +48 660075252</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mateuszrus13@gmail.com</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-    <!-- Image of location/map -->
-    <img src="https://cybersecurity.w3spaces.com/anon.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-  </div>
-</div>
-
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+			<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">MACHINES</a>
+			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+		</nav>
 
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+		</header>
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
+		<!-- Machines  a href="http://10.6.6.11:9090/" -->
+		<div class="w3-container" style="padding:128px 16px" id="about">
+			<h3 class="w3-center">Vulnerable machines</h3>
+			<p class="w3-center w3-large">Our vulnerable machines!</p>
+			<div class="w3-row-padding w3-center" style="margin-top:64px">
+				<div class="w3-quarter">
+					<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+					<p class="w3-large"><a href="http://webgoat.com.pl/WebGoat/login">WebGoat</a></p>
+					<p>WebGoat is a deliberately insecure application that allows interested developers just like you to test vulnerabilities commonly found in Java-based applications that use common and popular open source components. WebWolf is a separate web application which simulates an attackers machine. It makes it possible for us to make a clear distinction between what takes place on the attacked website and the actions you need to do as an “attacker”.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large"><a href="http://wordpress.com.pl">WordPress</a></p>
+					<p>Missconfigured wordpress with vulnerable plugins and passwords from dictionary</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large"><a href="http://juice-shop.com.pl/">Juice-Shop</p></a>
+					<p>Juice Shop is written in Node.js, Express and Angular. It was the first application written entirely in JavaScript listed in the OWASP VWA Directory. The application contains a vast number of hacking challenges of varying difficulty where the user is supposed to exploit the underlying vulnerabilities. The hacking progress is tracked on a score board. Finding this score board is actually one of the (easy) challenges!</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large"><a href="http://dvwa.com.pl">DVWA</a></p>
+					<p>Damn Vulnerable Web Application (DVWA) is a PHP/MySQL web application that is damn vulnerable. Its main goal is to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and to aid both students & teachers to learn about web application security in a controlled class room environment.</p>
+				</div>
+			</div>
+		</div>
+		<!-- Machines -->
+		<div class="w3-container" style="padding:128px 16px" id="about">
+			<h3 class="w3-center">Vulnerable machines </h3>
+			<p class="w3-center w3-large">Even more machines!</p>
+			<div class="w3-row-padding w3-center" style="margin-top:64px">
+				<div class="w3-quarter">
+					<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+					<p class="w3-large"><a href="http://mutillidae2.com.pl">Mutillidae_2</a></p>
+					<p>OWASP Mutillidae II is a free, open-source, deliberately vulnerable web application providing a target for web-security enthusiasts. Mutillidae can be installed on Linux and Windows using LAMP, WAMP, and XAMMP. It is pre-installed on SamuraiWTF and OWASP BWA. The existing version can be updated on these platforms. With dozens of vulnerabilities and hints to help the user; this is an easy-to-use web hacking environment designed for labs, security enthusiast, classrooms, CTF, and vulnerability assessment tool targets. Mutillidae has been used in graduate security courses, corporate web sec training courses, and as an "assess the assessor" target for vulnerability assessment software.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large"><a href="http://dvna.com.pl">DVNA</a></p>
+					<p>Damn Vulnerable NodeJS Application (DVNA) is a simple NodeJS application to demonstrate OWASP Top 10 Vulnerabilities and guide on fixing and avoiding these vulnerabilities. The fixes branch will contain fixes for the vulnerabilities. </p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large"><a href="http://hackazon.com.pl">Hackazon</a></p>
+					<p>Hackazon is a free, vulnerable test site that is an online storefront built with the same technologies used in today’s rich client and mobile applications. Hackazon has an AJAX interface, strict workflows and RESTful API’s used by a companion mobile app providing uniquely-effective training and testing ground for IT security professionals. And, it’s full of your favorite vulnerabilities like SQL Injection, cross-site scripting and so on.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large"><a href="http://hub.com.pl/ubuntud.pdf">Ubuntu machine</a></p>
+					<p>Local privilege escalation on Ubuntu Machine</p>
+				</div>
+			</div>
+		</div>
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+		<!-- Promo Section - "We know design" -->
+		<div class="w3-container w3-light-grey" style="padding:128px 16px">
+			<div class="w3-row-padding">
+				<div class="w3-col m6">
+					<h3>We know cybersecurity</h3>
+					<p>We have prepared many open source machines that will help you learn to hack. The machines are placed on the docker, but not only. We hope you will have a lot of fun!</p>
+					<p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Machines</a></p>
+				</div>
+				<div class="w3-col m6">
+					<img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+				</div>
+			</div>
+		</div>
 
-</body>
+		<!-- Team Section -->
+		<div class="w3-container" style="padding:128px 16px" id="team">
+			<h3 class="w3-center">THE TEAM</h3>
+			<p class="w3-center w3-large">The ones who created this project</p>
+			<div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+				<div class="w3-col l3 m6 w3-margin-bottom">
+					<div class="w3-card">
+						<img src="http://hub.com.pl/anon.jpg" alt="Mateusz" style="width:100%">
+						<div class="w3-container">
+							<h3>Mateusz Rus</h3>
+							<p class="w3-opacity">AGH Student & Penetration Tester</p>
+							<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+							<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col l3 m6 w3-margin-bottom">
+					<div class="w3-card">
+						<img src="http://hub.com.pl/anon.jpg" alt="Jakub" style="width:100%">
+						<div class="w3-container">
+							<h3>Jakub Niezabitowski</h3>
+							<p class="w3-opacity">AGH Student & SOC L2</p>
+							<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+							<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col l3 m6 w3-margin-bottom">
+					<div class="w3-card">
+						<img src="http://hub.com.pl/anon.jpg" alt="Szymon" style="width:100%">
+						<div class="w3-container">
+							<h3>Szymon Chmiel</h3>
+							<p class="w3-opacity">AGH Student & Penetration Tester</p>
+							<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+							<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col l3 m6 w3-margin-bottom">
+					<div class="w3-card">
+						<img src="http://hub.com.pl/anon.jpg" alt="Daniel" style="width:100%">
+						<div class="w3-container">
+							<h3>Daniel Adamiec</h3>
+							<p class="w3-opacity">AGH Student & Penetration Tester</p>
+							<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+							<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="mailto:mateuszrus@student.agh.edu.pl"> Contact</a></button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Promo Section "Statistics" -->
+		<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+			<div class="w3-quarter">
+				<span class="w3-xxlarge">100+</span>
+				<br>Vulnerabilities
+			</div>
+			<div class="w3-quarter">
+				<span class="w3-xxlarge">8</span>
+				<br>Virtual Machines
+			</div>
+			<div class="w3-quarter">
+				<span class="w3-xxlarge">120+</span>
+				<br>Visits on site 
+			</div>
+			<div class="w3-quarter">
+				<span class="w3-xxlarge">500+</span>
+				<br> Hours spent on project 
+			</div>
+		</div>
+
+		<!-- Modal for full size images on click-->
+		<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+			<span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+			<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+				<img id="img01" class="w3-image">
+				<p id="caption" class="w3-opacity w3-large"></p>
+			</div>
+		</div>
+
+		<!-- Skills Section -->
+		<div class="w3-container w3-light-grey w3-padding-64">
+			<div class="w3-row-padding">
+				<div class="w3-col m6">
+					<h3>Our Skills.</h3>
+					<p>The skills we acquired while creating this project</p>
+				</div>
+				<div class="w3-col m6">
+					<p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Ethical Hacking</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+					</div>
+					<p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>General Security</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+					</div>
+					<p class="w3-wide"><i class="fa fa-cog w3-margin-right"></i>Programming</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Contact Section -->
+		<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+			<h3 class="w3-center">CONTACT</h3>
+			<p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+			<div style="margin-top:48px">
+				<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Kraków, PL</p>
+				<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +48 660075252</p>
+				<p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mateuszrus13@gmail.com</p>
+				<br>
+				<form action="/action_page.php" target="_blank">
+					<p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+					<p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+					<p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+					<p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+					<p>
+					<button class="w3-button w3-black" type="submit">
+						<i class="fa fa-paper-plane"></i> SEND MESSAGE
+					</button>
+					</p>
+				</form>
+				<!-- Image of location/map -->
+				<img src="https://cybersecurity.w3spaces.com/anon.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+			</div>
+		</div>
+
+		<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+		<footer class="w3-center w3-black w3-padding-64">
+			<a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+			<script>
+				// Modal Image Gallery
+				function onClick(element) {
+									document.getElementById("img01").src = element.src;
+									document.getElementById("modal01").style.display = "block";
+									var captionText = document.getElementById("caption");
+									captionText.innerHTML = element.alt;
+								}
+
+
+				// Toggle between showing and hiding the sidebar when clicking the menu icon
+				var mySidebar = document.getElementById("mySidebar");
+
+				function w3_open() {
+									if (mySidebar.style.display === 'block') {
+														mySidebar.style.display = 'none';
+													} else {
+																		mySidebar.style.display = 'block';
+																	}
+								}
+
+				// Close the sidebar with the close button
+				function w3_close() {
+									mySidebar.style.display = "none";
+								}
+			</script>
+
+	</body>
 </html>
